@@ -6,6 +6,12 @@ import rts.GameState;
 import rts.units.Unit;
 import wox.serial.Easy;
 
+/**
+ * 
+ * @author alicequint
+ *
+ * @param <T> Network
+ */
 public class NN2DEvaluationFunction<T extends Network> extends NNEvaluationFunction<T> {
 
 	public static final double BASE_WEIGHT = 4; //hard to quantify because different amount of importance at different stages of the game

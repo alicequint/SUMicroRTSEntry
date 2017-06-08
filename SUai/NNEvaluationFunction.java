@@ -44,4 +44,9 @@ public abstract class NNEvaluationFunction<T extends Network> extends Evaluation
 	public void givePhysicalGameState(PhysicalGameState pgs) {
 		this.pgs = pgs;
 	}
+	
+	//used in (this) microRTSTask 
+	public PhysicalGameState getPhysicalGameState(){
+		return pgs;
+	}
 }
