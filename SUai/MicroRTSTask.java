@@ -15,7 +15,7 @@ import rts.PhysicalGameState;
 public class MicroRTSTask<T extends Network> implements HyperNEATTask { //extends NoisyLonerTask<T>
 	
 	NNEvaluationFunction<T> ef;
-	PhysicalGameState pgs = ef.getPhysicalGameState();
+	//PhysicalGameState pgs = ef.getPhysicalGameState();
 	
 	@SuppressWarnings("unchecked")
 	public MicroRTSTask() {}
@@ -45,8 +45,10 @@ public class MicroRTSTask<T extends Network> implements HyperNEATTask { //extend
 	 */
 	@Override
 	public List<Substrate> getSubstrateInformation() {
-		int height = pgs.getHeight();
-		int width = pgs.getWidth();
+		// TODO: Get actual height from game map somehow
+		// In the meantime, hard code
+		int height = 8; //pgs.getHeight();
+		int width = 8; //pgs.getWidth();
 		ArrayList<Substrate> subs = new ArrayList<Substrate>();
 		
 		Substrate inputsBoardState = new Substrate(new Pair<Integer, Integer>(width, height),
